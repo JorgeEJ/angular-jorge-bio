@@ -1,0 +1,112 @@
+$backColor: #ffffff;
+$hoverColor: rgba(16, 94, 97, 0.329);
+$mainShadow:  0px 0px 20px 3px #00000015;
+$bgBlack: #000;
+$bgDarkBlack: rgb(19, 19, 19);
+
+.main-box{
+  padding-top: 40px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 40px;
+
+.nightday-button{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: 0px;
+  padding: 8px 24px ;
+  background: $backColor;
+  border-radius: 22px;
+  font-size: 22px;
+  transition: all .3s ease;
+}
+.nightday-button:hover{
+  background: #0c5c59;
+  color: $backColor;
+
+}
+  .avatar{
+    width: 155px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow:$mainShadow;
+  }
+
+  h1{
+    font-size: 30px;
+    padding-top: 20px;
+
+    font-weight: 600;
+  }
+  .p1{
+    padding-top: 10px;
+  }
+
+  .p2{
+    padding-top: 3px;
+  }
+  .icons{
+    font-size: 20px;
+  }
+
+  .box-item{
+    background-color: $backColor;
+    padding: 16px;
+    margin: 20px;
+    box-shadow:$mainShadow;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    transition: all .3s ease;
+
+    fa-icon{
+      font-size: 50px;
+      color: #0c5c59;
+    }
+
+    .left-item{
+      width: 40%;
+    }
+    .right-item{
+      width: 60%;
+      place-items: center flex-start;
+      display: grid;
+      p{
+      text-align: left;
+margin: 0;
+      }
+    }
+    &:hover{
+      background-color:$hoverColor;
+    }
+  }
+}
+
+::ng-deep body.night {
+  background-color: $bgBlack;
+  transition: all .3s ease;
+  .main-box {
+      color: $backColor;
+      .box-item {
+          background-color: $bgDarkBlack !important;
+          color: $backColor !important;
+          fa-icon{
+            color: #0f918c !important;
+          }
+      }
+      .nightday-button{
+          color: $backColor!important;
+          background-color: $bgDarkBlack !important;
+      }
+      .nightday-button:hover{
+        color: $backColor!important;
+        background: #0f918c !important;
+    }
+
+  }
+}
